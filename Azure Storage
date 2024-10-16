@@ -1,0 +1,20 @@
+Azure Storage Service
+
+⮚ Diff types of data and requirements
+  ⮚ Relational, non-relational/No-SQL, datasheets, images, videos, backups
+  ⮚ Storage, access, security, availability, latency, processing, backup
+
+⮚ Diff types of Data Service
+  ⮚ Azure Blobs: Text and binary data
+  ⮚ Azure Files: Managed file shares (SMB Protocol)
+  ⮚ Azure Queues: Messaging
+  ⮚ Azure Tables: NoSQL store
+
+⮚ Features
+  ⮚ Durable and highly available – redundancy across datacenters or regions
+  ⮚ Secure – all data encrypted by default
+  ⮚ Scalable – massively scalable
+  ⮚ Managed - Azure handles hardware maintenance, updates, and critical issues for you.
+  ⮚ Accessible - accessible from anywhere in the world over HTTP or HTTPS.
+      ⮚ Clients libraries are available in all languages
+      ⮚ Support scripting in PowerShell or Azure CLI
