@@ -18,3 +18,37 @@ Azure Storage Service
   ⮚ Accessible - accessible from anywhere in the world over HTTP or HTTPS.
       ⮚ Clients libraries are available in all languages
       ⮚ Support scripting in PowerShell or Azure CLI
+
+
+
+Azure Storage Redundancy
+
+⮚ Locally redundant storage (LRS) – Three synchronous copies in same data center
+
+⮚ Zone-redundant storage (ZRS) – Three synchronous copies in three availability zones (AZs)
+
+⮚ Geo-redundant storage (GRS) - LRS + Asynchronous copy to secondary region (three more copies using LRS) – Read only access
+  ⮚ Read-access geo-redundant storage (RA-GRS) – Read Access on GRS
+
+⮚ Geo-zone-redundant storage (GZRS) – ZRS + Asynchronous copy to secondary region (three more copies using LRS) – Read only access
+  ⮚ Read-access geo-zone-redundant storage (RA-GZRS) – Read Access on GZRS
+
+
+
+Blob Storage
+
+⮚ Blob - Binary Large Object
+  ⮚ Any type or format
+  ⮚ Text, Images, audio, video, excel, backup files
+
+⮚ Use cases:
+  ⮚ Storing files for shared access
+  ⮚ Video and audio streaming
+  ⮚ Storing data for analysis (Data Lake Gen2)
+  ⮚ Writing to the log file
+  ⮚ Storing data for disaster recovery, backup, and archiving
+
+⮚ Flat structure
+
+⮚ Provides a unique namespace in Azure for your data.
+  ⮚ http://mystorageaccount.blob.core.windows.net
