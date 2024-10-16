@@ -52,3 +52,97 @@ Blob Storage
 
 ⮚ Provides a unique namespace in Azure for your data.
   ⮚ http://mystorageaccount.blob.core.windows.net
+
+
+
+Three types of Blob Storage
+
+⮚ Block Blobs:
+  ⮚ For large objects that doesn't use random read and write operations, files that are read from beginning to end
+  ⮚ Such as media files or image files for websites.
+
+⮚ Page Blobs:
+  ⮚ Optimized for random read and write operations.
+  ⮚ Provide durable disks for Azure Virtual Machines (Azure VMs)
+
+⮚ Append Blobs:
+  ⮚ Optimized for append operations. e. g. Logs
+  ⮚ When you modify an append blob, blocks are added to the end of the blob only
+  ⮚ Updating or deleting of existing blocks is not supported
+  ⮚ For example, you might write all of your trace logging to the same append blob for an application running on multiple VMs
+
+
+
+Storage Access Tiers
+
+⮚ Data stored in the cloud can be different based on how it's generated, processed, and accessed over its lifetime.
+
+⮚ Pricing
+  ⮚ The volume of data stored/month
+  ⮚ Types of operations performed
+  ⮚ Number of operations performed
+  ⮚ Data transfer cost, if any
+  ⮚ The selected data redundancy option
+
+⮚ Organize your data based on attributes like frequency of access and planned retention period.
+
+⮚ Blob access tiers
+  ⮚ Hot access tier
+  ⮚ Cool access tier
+  ⮚ Cold access tier
+  ⮚ Archive access tier
+
+
+Storage Access Tiers
+
+⮚ Hot
+  ⮚ Frequently accessed data
+      ⮚ Example - images for your website
+  ⮚ Low latency
+  ⮚ Higher access cost
+
+⮚ Cool
+  ⮚ Infrequent accessed data
+      ⮚ Example - invoices for your customers
+  ⮚ High latency
+  ⮚ Lower cost
+  ⮚ Stored for at least 30 days
+
+⮚ Cold
+  ⮚ Infrequent/Rarely accessed data
+  ⮚ High latency
+  ⮚ Lower storage costs and higher access costs compared to the cool tier
+  ⮚ Stored for at least 90 days
+
+⮚ Archive
+  ⮚ Rarely accessed data
+      ⮚ Example - long-term backups
+  ⮚ Highest access times and access cost
+  ⮚ Latency in hours
+  ⮚ Stored for at least 180 days
+  ⮚ Use Case: Business policy mandated Data Archiving, long term retention like healthcare data
+
+
+Performance Tiers
+
+Standard
+⮚ Backed by magnetic drives
+⮚ Support – All storage account
+⮚ Optimized for high capacity and high throughput
+⮚ Provides the lowest cost per GB.
+⮚ Best for applications that require bulk storage or where data is accessed infrequently.
+⮚ Example: Backup and DR datasets, media, pictures, videos.
+
+Premium
+⮚ Backed by solid state drives (SSD)
+⮚ Good for virtual machines and workloads that need low latency and high I/O performance
+⮚ Examples: transactional databases, big data analysis, IOT, AI or ML
+⮚ Block Blob: Best for high transaction rates or low storage latency
+⮚ File Shares: Best for enterprise or high performance applications that need to scale
+⮚ Page blobs: Best for random read and write operations
+
+Note: You cannot change performance tier after account creation
+
+
+
+
