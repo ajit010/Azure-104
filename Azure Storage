@@ -145,4 +145,89 @@ Note: You cannot change performance tier after account creation
 
 
 
+Azure Table Storage
 
+⮚ NoSQL key-value Storage
+
+⮚ Items are referred to as rows, and fields are known as columns
+
+⮚ All rows in a table must have a key
+
+⮚ No concept of relationships, stored procedures, secondary indexes, or foreign keys
+
+⮚ To help ensure fast access, Azure Table Storage splits a table into partitions
+
+⮚ Support very large volume of Data
+
+⮚ Consider Cosmos DB for new development
+
+⮚ Advantages
+  ⮚ It's simpler to scale
+  ⮚ A table can hold semi-structured data
+  ⮚ No complex relationships
+  ⮚ Data insertion and retrieval is fast
+
+⮚ Good to use for:
+  ⮚ Storing TBs of structured data capable of serving web scale applications
+  ⮚ Storing datasets that don't require complex joins, foreign keys, or stored procedures, and that can be denormalized for fast access.
+  ⮚ Capturing event logging and performance monitoring data.
+
+
+Azure Queue Storage
+
+⮚ Store large numbers of messages.
+
+⮚ Access messages via authenticated calls using HTTP or HTTPS.
+
+⮚ May contain millions of messages, up to the total capacity limit of a storage account.
+
+⮚ Queues are commonly used to create a backlog of work to process asynchronously.
+
+
+Azure File Storage
+
+⮚ Enables you to create files shares in the cloud, and access these file shares from anywhere with an internet connection
+
+⮚ Mounted concurrently by cloud or on-premises deployments.
+
+⮚ Accessible from Windows, Linux, and macOS clients.
+
+⮚ Accessible Server Message Block (SMB) protocol or Network File System (NFS) protocol
+
+⮚ Azure Files ensures the data is encrypted at rest, and the SMB protocol ensures the data is encrypted in transit.
+
+⮚ Use Cases
+  ⮚ Replace or supplement on-premises file servers
+  ⮚ Share application settings
+  ⮚ Dev/Test/Debug
+
+⮚ Key Benefits
+  ⮚ Shared access: Replace on-premises file shares with Azure file shares without application compatibility issues
+  ⮚ Fully managed: Azure will manage hardware or an OS
+  ⮚ Resiliency: you don’t have to deal with local power and network issues.
+
+
+Azure Disk Storage
+
+⮚ VM uses disks as a place to store an operating system, applications, and data in Azure.
+
+⮚ One virtual machine can have one OS disk and multiple Data disk but one data disk can only be link with one VM.
+
+⮚ Both the OS disk and the data disk are virtual hard disks (VHDs) stored in an Azure storage account.
+
+⮚ The VHDs used in Azure is .vhd files stored as page blobs in a standard or premium storage account in Azure.
+
+⮚ Unmanaged disks: We can create a storage account and specify it when we create the disk.
+    ⮚ Not recommended, previous unmanaged disks should migrate to managed disk
+
+⮚ Managed disk
+    ⮚ Azure creates and manages storage accounts in the background.
+    ⮚ We don't have to worry about scalability issues.
+    ⮚ Azure creates and manages the disk for us based on the size and performance tier we specify.
+
+⮚ Managed Disk types:
+    ⮚ Standard HDD: Backup, non-critical, infrequent access
+    ⮚ Standard SSD: lightly used production applications or dev/test environments
+    ⮚ Premium SSD disks: Super fast and high performance, very low latency, recommended for production and performance sensitive workloads
+    ⮚ Ultra disks (SSD): for most demanding IO-intensive workloads such as SAP HANA, top tier databases (for example, SQL, Oracle), and other
+      transaction-heavy workloads
